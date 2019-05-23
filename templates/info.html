@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<style>
+  button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <form action="{{url_for ('info')}}" method="POST">
+      <div class="row">
+        <div class="col">
+          <label for='InputFirstName'>First Name</label>
+          <input type="text" class="form-control" id="exampleInputFirstName1" placeholder="First Name" name="first_name">
+        </div>
+        <div class="col">
+          <label for="InputLastName">Last Name</label>
+          <input type="text" class="form-control" id="InputLastName" placeholder="Last Name" name="last_name">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <label for="InputBirthday">Birthday</label>
+          <input type="text" class="form-control" id="InputBirthday" placeholder="DD/MM/YYYY" name="birthday">
+        </div>
+        <div class="col">
+          <label for="InputFavoriteBand">Favorite Band</label>
+          <input type="text" class="form-control" id="InputFavoriteBand" placeholder="Favorite Band" name="favorite_band">
+        </div>
+        <div class="col">
+          <label for="InputZipCode">Zip Code</label>
+          <input type="text" class="form-control" id="InputZipCode" placeholder="Zip Code" name="zipcode">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+{% endblock %}
